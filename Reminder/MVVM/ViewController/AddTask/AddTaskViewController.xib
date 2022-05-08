@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-ExtraBold.ttf">
+            <string>Nunito-ExtraBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="Reminder" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="1LX-f3-6nH" id="c6d-6I-8Cl"/>
+                <outlet property="scrollView" destination="AU1-K3-Vxe" id="xtf-eq-tH5"/>
+                <outlet property="setReminderButton" destination="xh2-xv-IkQ" id="2Zo-xP-XIp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTy-bw-eNg" userLabel="Navigation View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khP-WQ-nDE">
+                            <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFv-fw-57z">
+                                    <rect key="frame" x="171.5" y="10" width="71" height="24"/>
+                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                    <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-2V-mdh">
+                                    <rect key="frame" x="15" y="7" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="20L-oN-OMp"/>
+                                        <constraint firstAttribute="width" constant="30" id="ZQm-10-ZhF"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="ic_arrow_left"/>
+                                    <connections>
+                                        <action selector="backButtonDidTap:" destination="-1" eventType="touchUpInside" id="lSp-1P-pxg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="eWR-2V-mdh" firstAttribute="centerY" secondItem="khP-WQ-nDE" secondAttribute="centerY" id="5lV-Al-YJl"/>
+                                <constraint firstAttribute="height" constant="44" id="5yH-1I-2eG"/>
+                                <constraint firstItem="VFv-fw-57z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eWR-2V-mdh" secondAttribute="trailing" constant="20" id="Eca-s8-5o9"/>
+                                <constraint firstItem="VFv-fw-57z" firstAttribute="centerX" secondItem="khP-WQ-nDE" secondAttribute="centerX" id="btC-tL-oCq"/>
+                                <constraint firstItem="VFv-fw-57z" firstAttribute="centerY" secondItem="khP-WQ-nDE" secondAttribute="centerY" id="dtz-FS-MWY"/>
+                                <constraint firstItem="eWR-2V-mdh" firstAttribute="leading" secondItem="khP-WQ-nDE" secondAttribute="leading" constant="15" id="wI5-pl-h3b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="wcO-7B-oir"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="khP-WQ-nDE" firstAttribute="top" secondItem="wcO-7B-oir" secondAttribute="top" id="8xQ-Vx-zFd"/>
+                        <constraint firstItem="wcO-7B-oir" firstAttribute="trailing" secondItem="khP-WQ-nDE" secondAttribute="trailing" id="9b7-oZ-cZX"/>
+                        <constraint firstAttribute="bottom" secondItem="khP-WQ-nDE" secondAttribute="bottom" id="QuA-W6-Grf"/>
+                        <constraint firstItem="khP-WQ-nDE" firstAttribute="leading" secondItem="wcO-7B-oir" secondAttribute="leading" id="Wl9-fi-cdH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LX-f3-6nH">
+                    <rect key="frame" x="0.0" y="98" width="414" height="690"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-K3-Vxe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-bf-pvJ">
+                                    <rect key="frame" x="0.0" y="256" width="414" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Fcf-bf-pvJ" firstAttribute="leading" secondItem="AU1-K3-Vxe" secondAttribute="leading" id="2je-Wz-Roe"/>
+                                <constraint firstAttribute="bottom" secondItem="Fcf-bf-pvJ" secondAttribute="bottom" id="GBq-1a-DCt"/>
+                                <constraint firstItem="Fcf-bf-pvJ" firstAttribute="top" secondItem="AU1-K3-Vxe" secondAttribute="top" id="JeV-tl-U8w"/>
+                                <constraint firstItem="Fcf-bf-pvJ" firstAttribute="width" secondItem="AU1-K3-Vxe" secondAttribute="width" id="XeG-Qh-55g"/>
+                                <constraint firstAttribute="trailing" secondItem="Fcf-bf-pvJ" secondAttribute="trailing" id="jhz-zL-jG6"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AU1-K3-Vxe" secondAttribute="bottom" id="Ay8-i4-SPd"/>
+                        <constraint firstItem="AU1-K3-Vxe" firstAttribute="top" secondItem="1LX-f3-6nH" secondAttribute="top" id="B4X-zb-nSK"/>
+                        <constraint firstItem="AU1-K3-Vxe" firstAttribute="leading" secondItem="1LX-f3-6nH" secondAttribute="leading" id="IcH-KE-n28"/>
+                        <constraint firstAttribute="trailing" secondItem="AU1-K3-Vxe" secondAttribute="trailing" id="zBi-Xy-KVs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-xv-IkQ" customClass="TapableView" customModule="Reminder" customModuleProvider="target">
+                    <rect key="frame" x="28" y="808" width="358" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtE-Ll-S60">
+                            <rect key="frame" x="127" y="14.5" width="104.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="MtE-Ll-S60" firstAttribute="centerX" secondItem="xh2-xv-IkQ" secondAttribute="centerX" id="MM3-FX-Ptp"/>
+                        <constraint firstAttribute="height" constant="52" id="kvI-0S-nfS"/>
+                        <constraint firstItem="MtE-Ll-S60" firstAttribute="centerY" secondItem="xh2-xv-IkQ" secondAttribute="centerY" id="xyy-TY-Mog"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="setReminderButtonDidTap:" destination="-1" eventType="touchUpInside" id="121-16-n4u"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1LX-f3-6nH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3xh-Lz-ucu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xh2-xv-IkQ" secondAttribute="trailing" constant="28" id="ClR-Or-gDX"/>
+                <constraint firstAttribute="bottom" secondItem="xh2-xv-IkQ" secondAttribute="bottom" constant="36" id="TYe-tJ-DRc"/>
+                <constraint firstItem="xh2-xv-IkQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="Z48-cN-Szz"/>
+                <constraint firstItem="BTy-bw-eNg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bZx-uV-u8z"/>
+                <constraint firstAttribute="trailing" secondItem="BTy-bw-eNg" secondAttribute="trailing" id="bq0-vv-c3M"/>
+                <constraint firstItem="BTy-bw-eNg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g7s-om-stz"/>
+                <constraint firstItem="1LX-f3-6nH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oVT-r6-bw8"/>
+                <constraint firstItem="xh2-xv-IkQ" firstAttribute="top" secondItem="1LX-f3-6nH" secondAttribute="bottom" constant="20" id="slX-Nb-tq7"/>
+                <constraint firstItem="1LX-f3-6nH" firstAttribute="top" secondItem="BTy-bw-eNg" secondAttribute="bottom" constant="10" id="zrf-Id-WEq"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="71.651785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_left" width="24" height="24"/>
+    </resources>
+</document>
