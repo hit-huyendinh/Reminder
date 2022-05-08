@@ -1,0 +1,13 @@
+*.xcworkspace/xcuserdata/
+Pods/
+_Prebuild
+_Prebuild_delta
+*.DS_Store
+*.xcodeproj/xcuserdata/
+*.xcodeproj/
+build/
+fastlane/report.xml
+*.zip
+*.ipa
+*.dSYM
+*.xcodeproj/project.xcworkspace/xcuserdata
